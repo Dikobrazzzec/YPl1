@@ -1,0 +1,4 @@
+﻿  l1.cpp
+C:\GITPr\C++\CryptoAPI\laby\l1\l1\l1.cpp(7,92): warning C4273: CryptGenRandom: несовместимая компоновка dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\wincrypt.h(1223,1): message : см. предыдущее определение "CryptGenRandom"
+  l1.vcxproj -> C:\GITPr\C++\CryptoAPI\laby\l1\Debug\l1.exe
