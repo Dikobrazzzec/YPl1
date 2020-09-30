@@ -4,14 +4,18 @@
 
 using namespace std;
 
-BOOL WINAPI CryptGenRandom(_In_ HCRYPTPROV hProv, _In_ DWORD dwLen, _Inout_ BYTE* pbBuffer);
-
 int main()
 { 
-	HCRYPTPROV hCrypt = 0;
-	const DWORD dwLength = 5;
-	BYTE pbBuffer[dwLength] = {};
-	//BYTE* ptr = &value;
-	CryptGenRandom(hCrypt, 16, pbBuffer);
+
+    //HCRYPTPROV hCrypt = 0;
+	//const DWORD dwLength = 5;
+	//BYTE pbBuffer[dwLength] = {};
+	BYTE value;
+	BYTE* ptr = &value;
+	HCRYPTPROV a;
+	//HCRYPTPROV* FParametr = &a;
+	CryptAcquireContext(&a,NULL ,NULL,PROV_RSA_FULL, CRYPT_VERIFYCONTEXT );
+	CryptGenRandom(a, 1, ptr);
+	cout << *ptr;
 	return 0;
 }
